@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label idLabel;
             this.roomDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.database1DataSet = new TestDB.Database1DataSet();
             this.showInformationButton = new MaterialSkin.Controls.MaterialButton();
@@ -44,44 +43,40 @@
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeTableAdapter = new TestDB.Database1DataSetTableAdapters.EmployeeTableAdapter();
             this.logOutButton = new MaterialSkin.Controls.MaterialButton();
-            this.newRoomBtn = new MaterialSkin.Controls.MaterialButton();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            idLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.roomDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(5, 434);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.TabIndex = 7;
+            idLabel.Text = "Id:";
+            // 
             // roomDataGridView
             // 
+            this.roomDataGridView.AllowUserToAddRows = false;
+            this.roomDataGridView.AllowUserToDeleteRows = false;
             this.roomDataGridView.AutoGenerateColumns = false;
             this.roomDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.roomDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewCheckBoxColumn1});
             this.roomDataGridView.DataSource = this.roomBindingSource;
-            this.roomDataGridView.Location = new System.Drawing.Point(104, 140);
-            this.roomDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roomDataGridView.Location = new System.Drawing.Point(7, 67);
             this.roomDataGridView.Name = "roomDataGridView";
-            this.roomDataGridView.RowHeadersWidth = 51;
-            this.roomDataGridView.Size = new System.Drawing.Size(323, 135);
+            this.roomDataGridView.ReadOnly = true;
+            this.roomDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.roomDataGridView.Size = new System.Drawing.Size(242, 346);
             this.roomDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "IsAvailable";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "IsAvailable";
-            this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.Width = 125;
             // 
             // roomBindingSource
             // 
@@ -100,8 +95,8 @@
             this.showInformationButton.Depth = 0;
             this.showInformationButton.HighEmphasis = true;
             this.showInformationButton.Icon = null;
-            this.showInformationButton.Location = new System.Drawing.Point(341, 287);
-            this.showInformationButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.showInformationButton.Location = new System.Drawing.Point(185, 422);
+            this.showInformationButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.showInformationButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.showInformationButton.Name = "showInformationButton";
             this.showInformationButton.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -116,10 +111,9 @@
             // id
             // 
             this.id.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.roomBindingSource, "Id", true));
-            this.id.Location = new System.Drawing.Point(100, 302);
-            this.id.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.id.Location = new System.Drawing.Point(64, 434);
             this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(133, 28);
+            this.id.Size = new System.Drawing.Size(100, 23);
             this.id.TabIndex = 3;
             this.id.Text = "label1";
             // 
@@ -130,8 +124,8 @@
             this.createNewSessionButton.Depth = 0;
             this.createNewSessionButton.HighEmphasis = true;
             this.createNewSessionButton.Icon = null;
-            this.createNewSessionButton.Location = new System.Drawing.Point(797, 362);
-            this.createNewSessionButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.createNewSessionButton.Location = new System.Drawing.Point(618, 422);
+            this.createNewSessionButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.createNewSessionButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.createNewSessionButton.Name = "createNewSessionButton";
             this.createNewSessionButton.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -150,8 +144,8 @@
             this.showEmployeeButton.Depth = 0;
             this.showEmployeeButton.HighEmphasis = true;
             this.showEmployeeButton.Icon = null;
-            this.showEmployeeButton.Location = new System.Drawing.Point(830, 430);
-            this.showEmployeeButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.showEmployeeButton.Location = new System.Drawing.Point(651, 470);
+            this.showEmployeeButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.showEmployeeButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.showEmployeeButton.Name = "showEmployeeButton";
             this.showEmployeeButton.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -170,8 +164,8 @@
             this.showBillLogButton.Depth = 0;
             this.showBillLogButton.HighEmphasis = true;
             this.showBillLogButton.Icon = null;
-            this.showBillLogButton.Location = new System.Drawing.Point(857, 495);
-            this.showBillLogButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.showBillLogButton.Location = new System.Drawing.Point(687, 518);
+            this.showBillLogButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.showBillLogButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.showBillLogButton.Name = "showBillLogButton";
             this.showBillLogButton.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -214,8 +208,8 @@
             this.logOutButton.Depth = 0;
             this.logOutButton.HighEmphasis = true;
             this.logOutButton.Icon = null;
-            this.logOutButton.Location = new System.Drawing.Point(9, 638);
-            this.logOutButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.logOutButton.Location = new System.Drawing.Point(7, 518);
+            this.logOutButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.logOutButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.logOutButton.Name = "logOutButton";
             this.logOutButton.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -227,32 +221,26 @@
             this.logOutButton.UseVisualStyleBackColor = true;
             this.logOutButton.Click += new System.EventHandler(this.logOutButton_Click);
             // 
-            // newRoomBtn
+            // dataGridViewCheckBoxColumn1
             // 
-            this.newRoomBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.newRoomBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.newRoomBtn.Depth = 0;
-            this.newRoomBtn.HighEmphasis = true;
-            this.newRoomBtn.Icon = null;
-            this.newRoomBtn.Location = new System.Drawing.Point(805, 555);
-            this.newRoomBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.newRoomBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.newRoomBtn.Name = "newRoomBtn";
-            this.newRoomBtn.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.newRoomBtn.Size = new System.Drawing.Size(158, 36);
-            this.newRoomBtn.TabIndex = 8;
-            this.newRoomBtn.Text = "Add New Room";
-            this.newRoomBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.newRoomBtn.UseAccentColor = false;
-            this.newRoomBtn.UseVisualStyleBackColor = true;
-            this.newRoomBtn.Click += new System.EventHandler(this.newRoomBtn_Click);
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "IsAvailable";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "IsAvailable";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // HomeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 693);
-            this.Controls.Add(this.newRoomBtn);
+            this.ClientSize = new System.Drawing.Size(813, 574);
+            this.Controls.Add(idLabel);
             this.Controls.Add(this.logOutButton);
             this.Controls.Add(this.showBillLogButton);
             this.Controls.Add(this.showEmployeeButton);
@@ -260,9 +248,7 @@
             this.Controls.Add(this.id);
             this.Controls.Add(this.showInformationButton);
             this.Controls.Add(this.roomDataGridView);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HomeForm";
-            this.Padding = new System.Windows.Forms.Padding(4, 79, 4, 4);
             this.Text = "HomeForm";
             this.Load += new System.EventHandler(this.HomeForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.roomDataGridView)).EndInit();
@@ -281,8 +267,6 @@
         private Database1DataSetTableAdapters.RoomTableAdapter roomTableAdapter;
         private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView roomDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private MaterialSkin.Controls.MaterialButton showInformationButton;
         private System.Windows.Forms.Label id;
         private MaterialSkin.Controls.MaterialButton createNewSessionButton;
@@ -291,6 +275,7 @@
         private System.Windows.Forms.BindingSource employeeBindingSource;
         private Database1DataSetTableAdapters.EmployeeTableAdapter employeeTableAdapter;
         private MaterialSkin.Controls.MaterialButton logOutButton;
-        private MaterialSkin.Controls.MaterialButton newRoomBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
     }
 }
