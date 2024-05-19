@@ -67,5 +67,10 @@ namespace TestDB.Forms
 
             Utilities.ChangeForm(this, new LoginForm());
         }
+
+        private void logInButton_Click(object sender, EventArgs e)
+        {
+            Utilities.ChangeForm(this, new LoginForm());
+        }
     }
 }

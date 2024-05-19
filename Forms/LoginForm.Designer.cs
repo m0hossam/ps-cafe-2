@@ -38,7 +38,6 @@
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeTableAdapter = new TestDB.Database1DataSetTableAdapters.EmployeeTableAdapter();
             this.tableAdapterManager = new TestDB.Database1DataSetTableAdapters.TableAdapterManager();
-            this.registerButton = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -108,7 +107,7 @@
             this.passwordTextBox.MaxLength = 32767;
             this.passwordTextBox.MouseState = MaterialSkin.MouseState.OUT;
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.PasswordChar = '\0';
+            this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.PrefixSuffixText = null;
             this.passwordTextBox.ReadOnly = false;
             this.passwordTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -168,32 +167,11 @@
             this.tableAdapterManager.SessionTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = TestDB.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // registerButton
-            // 
-            this.registerButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.registerButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.registerButton.Depth = 0;
-            this.registerButton.HighEmphasis = true;
-            this.registerButton.Icon = null;
-            this.registerButton.Location = new System.Drawing.Point(352, 335);
-            this.registerButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.registerButton.MouseState = MaterialSkin.MouseState.HOVER;
-            this.registerButton.Name = "registerButton";
-            this.registerButton.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.registerButton.Size = new System.Drawing.Size(89, 36);
-            this.registerButton.TabIndex = 5;
-            this.registerButton.Text = "Register";
-            this.registerButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.registerButton.UseAccentColor = false;
-            this.registerButton.UseVisualStyleBackColor = true;
-            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 550);
-            this.Controls.Add(this.registerButton);
+            this.ClientSize = new System.Drawing.Size(800, 464);
             this.Controls.Add(this.logInButton);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.userNameTextBox);
@@ -220,6 +198,5 @@
         private System.Windows.Forms.BindingSource employeeBindingSource;
         private Database1DataSetTableAdapters.EmployeeTableAdapter employeeTableAdapter;
         private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private MaterialSkin.Controls.MaterialButton registerButton;
     }
 }

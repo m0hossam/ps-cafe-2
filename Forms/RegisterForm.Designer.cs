@@ -34,7 +34,6 @@
             this.employeeTableAdapter = new TestDB.Database1DataSetTableAdapters.EmployeeTableAdapter();
             this.tableAdapterManager = new TestDB.Database1DataSetTableAdapters.TableAdapterManager();
             this.registerBtn = new MaterialSkin.Controls.MaterialButton();
-            this.passwordTextBox = new MaterialSkin.Controls.MaterialTextBox();
             this.usernameTextBox = new MaterialSkin.Controls.MaterialTextBox();
             this.salaryNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.femaleRadioBtn = new MaterialSkin.Controls.MaterialRadioButton();
@@ -45,6 +44,8 @@
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.logInButton = new MaterialSkin.Controls.MaterialButton();
+            this.passwordTextBox = new MaterialSkin.Controls.MaterialTextBox2();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salaryNumericUpDown)).BeginInit();
@@ -95,30 +96,12 @@
             this.registerBtn.UseVisualStyleBackColor = true;
             this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
             // 
-            // passwordTextBox
-            // 
-            this.passwordTextBox.AnimateReadOnly = false;
-            this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.passwordTextBox.Depth = 0;
-            this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.passwordTextBox.LeadingIcon = null;
-            this.passwordTextBox.Location = new System.Drawing.Point(297, 305);
-            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.passwordTextBox.MaxLength = 50;
-            this.passwordTextBox.MouseState = MaterialSkin.MouseState.OUT;
-            this.passwordTextBox.Multiline = false;
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(201, 50);
-            this.passwordTextBox.TabIndex = 44;
-            this.passwordTextBox.Text = "";
-            this.passwordTextBox.TrailingIcon = null;
-            // 
             // usernameTextBox
             // 
             this.usernameTextBox.AnimateReadOnly = false;
             this.usernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.usernameTextBox.Depth = 0;
-            this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.usernameTextBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.usernameTextBox.LeadingIcon = null;
             this.usernameTextBox.Location = new System.Drawing.Point(297, 239);
             this.usernameTextBox.Margin = new System.Windows.Forms.Padding(2);
@@ -176,7 +159,7 @@
             this.nameTextBox.AnimateReadOnly = false;
             this.nameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nameTextBox.Depth = 0;
-            this.nameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.nameTextBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.nameTextBox.LeadingIcon = null;
             this.nameTextBox.Location = new System.Drawing.Point(297, 89);
             this.nameTextBox.Margin = new System.Windows.Forms.Padding(2);
@@ -254,12 +237,61 @@
             this.materialLabel1.TabIndex = 34;
             this.materialLabel1.Text = "Full Name";
             // 
+            // logInButton
+            // 
+            this.logInButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.logInButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.logInButton.Depth = 0;
+            this.logInButton.HighEmphasis = true;
+            this.logInButton.Icon = null;
+            this.logInButton.Location = new System.Drawing.Point(365, 427);
+            this.logInButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.logInButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.logInButton.Name = "logInButton";
+            this.logInButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.logInButton.Size = new System.Drawing.Size(64, 36);
+            this.logInButton.TabIndex = 45;
+            this.logInButton.Text = "LogIn";
+            this.logInButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.logInButton.UseAccentColor = false;
+            this.logInButton.UseVisualStyleBackColor = true;
+            this.logInButton.Click += new System.EventHandler(this.logInButton_Click);
+            // 
+            // passwordTextBox
+            // 
+            this.passwordTextBox.AnimateReadOnly = false;
+            this.passwordTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.passwordTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.passwordTextBox.Depth = 0;
+            this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.passwordTextBox.HideSelection = true;
+            this.passwordTextBox.LeadingIcon = null;
+            this.passwordTextBox.Location = new System.Drawing.Point(297, 294);
+            this.passwordTextBox.MaxLength = 32767;
+            this.passwordTextBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '*';
+            this.passwordTextBox.PrefixSuffixText = null;
+            this.passwordTextBox.ReadOnly = false;
+            this.passwordTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.passwordTextBox.SelectedText = "";
+            this.passwordTextBox.SelectionLength = 0;
+            this.passwordTextBox.SelectionStart = 0;
+            this.passwordTextBox.ShortcutsEnabled = true;
+            this.passwordTextBox.Size = new System.Drawing.Size(201, 48);
+            this.passwordTextBox.TabIndex = 46;
+            this.passwordTextBox.TabStop = false;
+            this.passwordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.passwordTextBox.TrailingIcon = null;
+            this.passwordTextBox.UseSystemPasswordChar = false;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(776, 442);
+            this.ClientSize = new System.Drawing.Size(776, 471);
             this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.logInButton);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.salaryNumericUpDown);
             this.Controls.Add(this.femaleRadioBtn);
@@ -291,7 +323,6 @@
         private Database1DataSetTableAdapters.EmployeeTableAdapter employeeTableAdapter;
         private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private MaterialSkin.Controls.MaterialButton registerBtn;
-        private MaterialSkin.Controls.MaterialTextBox passwordTextBox;
         private MaterialSkin.Controls.MaterialTextBox usernameTextBox;
         private System.Windows.Forms.NumericUpDown salaryNumericUpDown;
         private MaterialSkin.Controls.MaterialRadioButton femaleRadioBtn;
@@ -302,5 +333,7 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialButton logInButton;
+        private MaterialSkin.Controls.MaterialTextBox2 passwordTextBox;
     }
 }

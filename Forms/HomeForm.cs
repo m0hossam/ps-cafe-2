@@ -48,7 +48,11 @@ namespace TestDB.Forms
 
         private void createNewSessionButton_Click(object sender, EventArgs e)
         {
-            Utilities.ChangeForm(this, new NewSessionForm(int.Parse(id.Text)));
+            string IsAvailable = this.roomTableAdapter.GetRoomById(int.Parse(id.Text)).Rows[0]["IsAvailable"].ToString();
+            if(IsAvailable == "True")
+                Utilities.ChangeForm(this, new NewSessionForm(int.Parse(id.Text)));
+            else
+                MessageBox.Show("Error");
         }
 
         private void showEmployeeButton_Click(object sender, EventArgs e)
