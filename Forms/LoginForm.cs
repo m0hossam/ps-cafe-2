@@ -43,7 +43,6 @@ namespace TestDB.Forms
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'database1DataSet.Employee' table. You can move, or remove it, as needed.
             this.employeeTableAdapter.Fill(this.database1DataSet.Employee);
 
         }

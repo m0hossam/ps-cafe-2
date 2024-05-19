@@ -16,10 +16,12 @@ namespace TestDB.Forms
     {
 
         string username;
+        string isAdmin;
         public HomeForm(string username)
         {
             InitializeComponent();
             this.username = username;
+            this.isAdmin = this.employeeTableAdapter.GetEmployeeByUsername(this.username).Rows[0]["IsAdmin"].ToString();
         }
 
         private void roomBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -46,7 +48,23 @@ namespace TestDB.Forms
 
         private void createNewSessionButton_Click(object sender, EventArgs e)
         {
-            
+            Utilities.ChangeForm(this, new NewSessionForm(int.Parse(id.Text)));
+        }
+
+        private void showEmployeeButton_Click(object sender, EventArgs e)
+        {
+            if (isAdmin == "True")
+                Utilities.ChangeForm(this, new EmployeeForm());
+            else 
+                MessageBox.Show("Error");
+        }
+
+        private void showBillLogButton_Click(object sender, EventArgs e)
+        {
+            if (isAdmin == "True")
+                Utilities.ChangeForm(this, new EmployeeForm());
+            else
+                MessageBox.Show("Error");
         }
     }
 }
