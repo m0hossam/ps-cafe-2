@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+using ps_cafe;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +12,41 @@ using System.Windows.Forms;
 
 namespace TestDB.Forms
 {
-    public partial class HomeForm : Form
+    public partial class HomeForm : MaterialForm
     {
-        public HomeForm()
+
+        string username;
+        public HomeForm(string username)
         {
             InitializeComponent();
+            this.username = username;
+        }
+
+        private void roomBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.roomBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.database1DataSet);
+
+        }
+
+        private void HomeForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'database1DataSet.Employee' table. You can move, or remove it, as needed.
+            this.employeeTableAdapter.Fill(this.database1DataSet.Employee);
+            // TODO: This line of code loads data into the 'database1DataSet.Room' table. You can move, or remove it, as needed.
+            this.roomTableAdapter.Fill(this.database1DataSet.Room);
+
+        }
+
+        private void showInformationButton_Click(object sender, EventArgs e)
+        {
+            Utilities.ChangeForm(this, new RoomSessionForm(int.Parse(id.Text)));
+        }
+
+        private void createNewSessionButton_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -12,9 +12,14 @@ namespace TestDB.Forms
 {
     public partial class RoomSessionForm : Form
     {
-        public RoomSessionForm()
+
+        private int id;
+        public RoomSessionForm(int id)
         {
             InitializeComponent();
+            this.id = id;
         }
+
+
     }
 }
