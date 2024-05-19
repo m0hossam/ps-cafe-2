@@ -54,7 +54,7 @@ namespace TestDB.Forms
                     return;
                 }
             }
-            this.employeeTableAdapter.InsertEmployee(
+            this.employeeTableAdapter.InsertAdmin(
                 nameTextBox.Text,
                 (maleRadioBtn.Checked ? maleRadioBtn.Text : femaleRadioBtn.Text),
                 (double)salaryNumericUpDown.Value,
