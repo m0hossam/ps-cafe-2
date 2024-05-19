@@ -14,9 +14,11 @@ namespace TestDB.Forms
 {
     public partial class EmployeeForm : MaterialForm
     {
-        public EmployeeForm()
+        string username;
+        public EmployeeForm(string username)
         {
             InitializeComponent();
+            this.username = username;
         }
 
         private void employeeBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -34,7 +36,7 @@ namespace TestDB.Forms
 
         private void addEmployeeButton_Click(object sender, EventArgs e)
         {
-            Utilities.ChangeForm(this, new NewEmployeeForm());
+            Utilities.ChangeForm(this, new NewEmployeeForm(username));
         }
 
         private void removeEmployeeButton_Click(object sender, EventArgs e)
@@ -45,11 +47,18 @@ namespace TestDB.Forms
         private void updateSalaryButton_Click(object sender, EventArgs e)
         {
             this.employeeTableAdapter.UpdateEmployeeSalary((double)salaryNumericUpDown.Value, usernameLabel.Text, int.Parse(idLabel.Text));
+            MessageBox.Show("Salary Updated Successfully");
         }
 
         private void changePasswordButton_Click(object sender, EventArgs e)
         {
             this.employeeTableAdapter.UpdateEmployeePassword(passwordTextBox.Text, usernameLabel.Text, int.Parse(idLabel.Text));
+            MessageBox.Show("Salary Updated Successfully");
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            Utilities.ChangeForm(this, new HomeForm(username));
         }
     }
 }
