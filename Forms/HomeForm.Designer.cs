@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.roomDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database1DataSet = new TestDB.Database1DataSet();
             this.showInformationButton = new MaterialSkin.Controls.MaterialButton();
             this.id = new System.Windows.Forms.Label();
             this.createNewSessionButton = new MaterialSkin.Controls.MaterialButton();
             this.showEmployeeButton = new MaterialSkin.Controls.MaterialButton();
             this.showBillLogButton = new MaterialSkin.Controls.MaterialButton();
-            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.database1DataSet = new TestDB.Database1DataSet();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.roomTableAdapter = new TestDB.Database1DataSetTableAdapters.RoomTableAdapter();
             this.tableAdapterManager = new TestDB.Database1DataSetTableAdapters.TableAdapterManager();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -61,6 +61,29 @@
             this.roomDataGridView.Name = "roomDataGridView";
             this.roomDataGridView.Size = new System.Drawing.Size(242, 110);
             this.roomDataGridView.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "IsAvailable";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "IsAvailable";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            // 
+            // roomBindingSource
+            // 
+            this.roomBindingSource.DataMember = "Room";
+            this.roomBindingSource.DataSource = this.database1DataSet;
+            // 
+            // database1DataSet
+            // 
+            this.database1DataSet.DataSetName = "Database1DataSet";
+            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // showInformationButton
             // 
@@ -129,6 +152,7 @@
             this.showEmployeeButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.showEmployeeButton.UseAccentColor = false;
             this.showEmployeeButton.UseVisualStyleBackColor = true;
+            this.showEmployeeButton.Click += new System.EventHandler(this.showEmployeeButton_Click);
             // 
             // showBillLogButton
             // 
@@ -148,29 +172,7 @@
             this.showBillLogButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.showBillLogButton.UseAccentColor = false;
             this.showBillLogButton.UseVisualStyleBackColor = true;
-            // 
-            // roomBindingSource
-            // 
-            this.roomBindingSource.DataMember = "Room";
-            this.roomBindingSource.DataSource = this.database1DataSet;
-            // 
-            // database1DataSet
-            // 
-            this.database1DataSet.DataSetName = "Database1DataSet";
-            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "IsAvailable";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "IsAvailable";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.showBillLogButton.Click += new System.EventHandler(this.showBillLogButton_Click);
             // 
             // roomTableAdapter
             // 
