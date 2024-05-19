@@ -35,7 +35,10 @@ namespace TestDB.Forms
             else
             {
                 roomAvailabilityLabel.Text = "UNAVAILABLE";
-
+                gameConsoleLabel.Text = this.sessionTableAdapter.GetSessionByRoomId(roomId).Rows[0]["GameConsole"].ToString();
+                gameLabel.Text = this.sessionTableAdapter.GetSessionByRoomId(roomId).Rows[0]["Game"].ToString();
+                startTimeLabel.Text = this.sessionTableAdapter.GetSessionByRoomId(roomId).Rows[0]["StartTime"].ToString();
+                endTimeLabel.Text = this.sessionTableAdapter.GetSessionByRoomId(roomId).Rows[0]["EndTime"].ToString();
             }
         }
 
@@ -49,6 +52,8 @@ namespace TestDB.Forms
 
         private void RoomSessionForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'database1DataSet.Session' table. You can move, or remove it, as needed.
+            this.sessionTableAdapter.Fill(this.database1DataSet.Session);
             // TODO: This line of code loads data into the 'database1DataSet.Room' table. You can move, or remove it, as needed.
             this.roomTableAdapter.Fill(this.database1DataSet.Room);
 

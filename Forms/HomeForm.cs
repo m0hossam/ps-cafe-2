@@ -50,7 +50,7 @@ namespace TestDB.Forms
         {
             string IsAvailable = this.roomTableAdapter.GetRoomById(int.Parse(id.Text)).Rows[0]["IsAvailable"].ToString();
             if(IsAvailable == "True")
-                Utilities.ChangeForm(this, new NewSessionForm(int.Parse(id.Text)));
+                Utilities.ChangeForm(this, new NewSessionForm(int.Parse(id.Text), username));
             else
                 MessageBox.Show("Error");
         }
@@ -74,6 +74,20 @@ namespace TestDB.Forms
         private void logOutButton_Click(object sender, EventArgs e)
         {
             Utilities.ChangeForm(this, new RegisterForm());
+        }
+
+        private void newRoomBtn_Click(object sender, EventArgs e)
+        {
+            if (isAdmin == "False")
+            {
+                MessageBox.Show("You have to be an admin to access this option!");
+                return;
+            }
+
+            this.roomTableAdapter.InsertRoom();
+            this.roomBindingSource.EndEdit();
+            this.roomTableAdapter.Fill(this.database1DataSet.Room);
+            this.tableAdapterManager.UpdateAll(this.database1DataSet);
         }
     }
 }

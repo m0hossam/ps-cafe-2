@@ -45,10 +45,16 @@
             this.newSessionBtn = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.roomIdLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.roomTableAdapter = new TestDB.Database1DataSetTableAdapters.RoomTableAdapter();
+            this.billBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.billTableAdapter = new TestDB.Database1DataSetTableAdapters.BillTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.billBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // database1DataSet
@@ -95,8 +101,7 @@
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(164, 163);
-            this.materialLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel1.Location = new System.Drawing.Point(219, 201);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(108, 19);
@@ -108,8 +113,7 @@
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(209, 227);
-            this.materialLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel2.Location = new System.Drawing.Point(279, 279);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(47, 19);
@@ -121,8 +125,7 @@
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(190, 287);
-            this.materialLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel4.Location = new System.Drawing.Point(253, 353);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(72, 19);
@@ -150,12 +153,12 @@
             "Xbox One",
             "Xbox Series X",
             "Xbox Series S"});
-            this.consoleComboBox.Location = new System.Drawing.Point(284, 148);
-            this.consoleComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.consoleComboBox.Location = new System.Drawing.Point(379, 182);
+            this.consoleComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.consoleComboBox.MaxDropDownItems = 4;
             this.consoleComboBox.MouseState = MaterialSkin.MouseState.OUT;
             this.consoleComboBox.Name = "consoleComboBox";
-            this.consoleComboBox.Size = new System.Drawing.Size(269, 49);
+            this.consoleComboBox.Size = new System.Drawing.Size(357, 49);
             this.consoleComboBox.StartIndex = 0;
             this.consoleComboBox.TabIndex = 5;
             // 
@@ -184,21 +187,21 @@
             "FIFA 22",
             "FIFA 23",
             "FIFA 24"});
-            this.gameComboBox.Location = new System.Drawing.Point(284, 216);
-            this.gameComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gameComboBox.Location = new System.Drawing.Point(379, 266);
+            this.gameComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gameComboBox.MaxDropDownItems = 4;
             this.gameComboBox.MouseState = MaterialSkin.MouseState.OUT;
             this.gameComboBox.Name = "gameComboBox";
-            this.gameComboBox.Size = new System.Drawing.Size(269, 49);
+            this.gameComboBox.Size = new System.Drawing.Size(357, 49);
             this.gameComboBox.StartIndex = 0;
             this.gameComboBox.TabIndex = 6;
             // 
             // endTimeDateTimePicker
             // 
-            this.endTimeDateTimePicker.Location = new System.Drawing.Point(284, 287);
-            this.endTimeDateTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.endTimeDateTimePicker.Location = new System.Drawing.Point(379, 353);
+            this.endTimeDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.endTimeDateTimePicker.Name = "endTimeDateTimePicker";
-            this.endTimeDateTimePicker.Size = new System.Drawing.Size(269, 20);
+            this.endTimeDateTimePicker.Size = new System.Drawing.Size(357, 22);
             this.endTimeDateTimePicker.TabIndex = 8;
             // 
             // newSessionBtn
@@ -208,8 +211,8 @@
             this.newSessionBtn.Depth = 0;
             this.newSessionBtn.HighEmphasis = true;
             this.newSessionBtn.Icon = null;
-            this.newSessionBtn.Location = new System.Drawing.Point(284, 329);
-            this.newSessionBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.newSessionBtn.Location = new System.Drawing.Point(379, 405);
+            this.newSessionBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.newSessionBtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.newSessionBtn.Name = "newSessionBtn";
             this.newSessionBtn.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -226,8 +229,7 @@
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(195, 106);
-            this.materialLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel3.Location = new System.Drawing.Point(260, 130);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(66, 19);
@@ -239,19 +241,36 @@
             this.roomIdLabel.AutoSize = true;
             this.roomIdLabel.Depth = 0;
             this.roomIdLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.roomIdLabel.Location = new System.Drawing.Point(282, 106);
-            this.roomIdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.roomIdLabel.Location = new System.Drawing.Point(376, 130);
             this.roomIdLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.roomIdLabel.Name = "roomIdLabel";
             this.roomIdLabel.Size = new System.Drawing.Size(10, 19);
             this.roomIdLabel.TabIndex = 11;
             this.roomIdLabel.Text = "0";
             // 
+            // roomBindingSource
+            // 
+            this.roomBindingSource.DataMember = "Room";
+            this.roomBindingSource.DataSource = this.database1DataSet;
+            // 
+            // roomTableAdapter
+            // 
+            this.roomTableAdapter.ClearBeforeFill = true;
+            // 
+            // billBindingSource
+            // 
+            this.billBindingSource.DataMember = "Bill";
+            this.billBindingSource.DataSource = this.database1DataSet;
+            // 
+            // billTableAdapter
+            // 
+            this.billTableAdapter.ClearBeforeFill = true;
+            // 
             // NewSessionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(902, 479);
+            this.ClientSize = new System.Drawing.Size(1253, 590);
             this.Controls.Add(this.roomIdLabel);
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.newSessionBtn);
@@ -261,14 +280,17 @@
             this.Controls.Add(this.materialLabel4);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "NewSessionForm";
-            this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
+            this.Padding = new System.Windows.Forms.Padding(3, 64, 3, 2);
             this.Text = "NewSessionForm";
+            this.Load += new System.EventHandler(this.NewSessionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.billBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,5 +314,9 @@
         private MaterialSkin.Controls.MaterialButton newSessionBtn;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel roomIdLabel;
+        private System.Windows.Forms.BindingSource roomBindingSource;
+        private Database1DataSetTableAdapters.RoomTableAdapter roomTableAdapter;
+        private System.Windows.Forms.BindingSource billBindingSource;
+        private Database1DataSetTableAdapters.BillTableAdapter billTableAdapter;
     }
 }

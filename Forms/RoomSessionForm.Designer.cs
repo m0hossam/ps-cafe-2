@@ -44,8 +44,11 @@
             this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.roomTableAdapter = new TestDB.Database1DataSetTableAdapters.RoomTableAdapter();
             this.tableAdapterManager = new TestDB.Database1DataSetTableAdapters.TableAdapterManager();
+            this.sessionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sessionTableAdapter = new TestDB.Database1DataSetTableAdapters.SessionTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -206,11 +209,20 @@
             this.tableAdapterManager.SessionTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = TestDB.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // sessionBindingSource
+            // 
+            this.sessionBindingSource.DataMember = "Session";
+            this.sessionBindingSource.DataSource = this.database1DataSet;
+            // 
+            // sessionTableAdapter
+            // 
+            this.sessionTableAdapter.ClearBeforeFill = true;
+            // 
             // RoomSessionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(813, 461);
+            this.ClientSize = new System.Drawing.Size(818, 473);
             this.Controls.Add(this.gameLabel);
             this.Controls.Add(this.gameConsoleLabel);
             this.Controls.Add(this.endTimeLabel);
@@ -227,6 +239,7 @@
             this.Load += new System.EventHandler(this.RoomSessionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,5 +261,7 @@
         private System.Windows.Forms.BindingSource roomBindingSource;
         private Database1DataSetTableAdapters.RoomTableAdapter roomTableAdapter;
         private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingSource sessionBindingSource;
+        private Database1DataSetTableAdapters.SessionTableAdapter sessionTableAdapter;
     }
 }
