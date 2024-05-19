@@ -66,7 +66,7 @@ namespace TestDB.Forms
         private void showBillLogButton_Click(object sender, EventArgs e)
         {
             if (isAdmin == "True")
-                Utilities.ChangeForm(this, new EmployeeForm(username));
+                Utilities.ChangeForm(this, new BillLogForm(username));
             else
                 MessageBox.Show("Error");
         }

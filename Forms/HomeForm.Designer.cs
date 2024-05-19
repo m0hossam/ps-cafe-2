@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label idLabel;
             this.roomDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -44,6 +45,7 @@
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeTableAdapter = new TestDB.Database1DataSetTableAdapters.EmployeeTableAdapter();
             this.logOutButton = new MaterialSkin.Controls.MaterialButton();
+            idLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.roomDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
@@ -58,7 +60,7 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewCheckBoxColumn1});
             this.roomDataGridView.DataSource = this.roomBindingSource;
-            this.roomDataGridView.Location = new System.Drawing.Point(78, 114);
+            this.roomDataGridView.Location = new System.Drawing.Point(268, 176);
             this.roomDataGridView.Name = "roomDataGridView";
             this.roomDataGridView.Size = new System.Drawing.Size(242, 110);
             this.roomDataGridView.TabIndex = 1;
@@ -93,7 +95,7 @@
             this.showInformationButton.Depth = 0;
             this.showInformationButton.HighEmphasis = true;
             this.showInformationButton.Icon = null;
-            this.showInformationButton.Location = new System.Drawing.Point(256, 233);
+            this.showInformationButton.Location = new System.Drawing.Point(446, 295);
             this.showInformationButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.showInformationButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.showInformationButton.Name = "showInformationButton";
@@ -109,7 +111,7 @@
             // id
             // 
             this.id.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.roomBindingSource, "Id", true));
-            this.id.Location = new System.Drawing.Point(75, 245);
+            this.id.Location = new System.Drawing.Point(325, 307);
             this.id.Name = "id";
             this.id.Size = new System.Drawing.Size(100, 23);
             this.id.TabIndex = 3;
@@ -122,7 +124,7 @@
             this.createNewSessionButton.Depth = 0;
             this.createNewSessionButton.HighEmphasis = true;
             this.createNewSessionButton.Icon = null;
-            this.createNewSessionButton.Location = new System.Drawing.Point(598, 294);
+            this.createNewSessionButton.Location = new System.Drawing.Point(618, 422);
             this.createNewSessionButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.createNewSessionButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.createNewSessionButton.Name = "createNewSessionButton";
@@ -142,7 +144,7 @@
             this.showEmployeeButton.Depth = 0;
             this.showEmployeeButton.HighEmphasis = true;
             this.showEmployeeButton.Icon = null;
-            this.showEmployeeButton.Location = new System.Drawing.Point(614, 342);
+            this.showEmployeeButton.Location = new System.Drawing.Point(651, 470);
             this.showEmployeeButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.showEmployeeButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.showEmployeeButton.Name = "showEmployeeButton";
@@ -162,7 +164,7 @@
             this.showBillLogButton.Depth = 0;
             this.showBillLogButton.HighEmphasis = true;
             this.showBillLogButton.Icon = null;
-            this.showBillLogButton.Location = new System.Drawing.Point(633, 390);
+            this.showBillLogButton.Location = new System.Drawing.Point(687, 518);
             this.showBillLogButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.showBillLogButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.showBillLogButton.Name = "showBillLogButton";
@@ -211,7 +213,7 @@
             this.logOutButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.logOutButton.Name = "logOutButton";
             this.logOutButton.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.logOutButton.Size = new System.Drawing.Size(158, 36);
+            this.logOutButton.Size = new System.Drawing.Size(78, 36);
             this.logOutButton.TabIndex = 7;
             this.logOutButton.Text = "Logout";
             this.logOutButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -219,11 +221,21 @@
             this.logOutButton.UseVisualStyleBackColor = true;
             this.logOutButton.Click += new System.EventHandler(this.logOutButton_Click);
             // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(266, 307);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.TabIndex = 7;
+            idLabel.Text = "Id:";
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 563);
+            this.ClientSize = new System.Drawing.Size(813, 574);
+            this.Controls.Add(idLabel);
             this.Controls.Add(this.logOutButton);
             this.Controls.Add(this.showBillLogButton);
             this.Controls.Add(this.showEmployeeButton);
