@@ -43,6 +43,7 @@
             this.tableAdapterManager = new TestDB.Database1DataSetTableAdapters.TableAdapterManager();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeTableAdapter = new TestDB.Database1DataSetTableAdapters.EmployeeTableAdapter();
+            this.logOutButton = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.roomDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
@@ -198,11 +199,32 @@
             // 
             this.employeeTableAdapter.ClearBeforeFill = true;
             // 
+            // logOutButton
+            // 
+            this.logOutButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.logOutButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.logOutButton.Depth = 0;
+            this.logOutButton.HighEmphasis = true;
+            this.logOutButton.Icon = null;
+            this.logOutButton.Location = new System.Drawing.Point(7, 518);
+            this.logOutButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.logOutButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.logOutButton.Name = "logOutButton";
+            this.logOutButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.logOutButton.Size = new System.Drawing.Size(158, 36);
+            this.logOutButton.TabIndex = 7;
+            this.logOutButton.Text = "Logout";
+            this.logOutButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.logOutButton.UseAccentColor = false;
+            this.logOutButton.UseVisualStyleBackColor = true;
+            this.logOutButton.Click += new System.EventHandler(this.logOutButton_Click);
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 563);
+            this.Controls.Add(this.logOutButton);
             this.Controls.Add(this.showBillLogButton);
             this.Controls.Add(this.showEmployeeButton);
             this.Controls.Add(this.createNewSessionButton);
@@ -237,5 +259,6 @@
         private MaterialSkin.Controls.MaterialButton showBillLogButton;
         private System.Windows.Forms.BindingSource employeeBindingSource;
         private Database1DataSetTableAdapters.EmployeeTableAdapter employeeTableAdapter;
+        private MaterialSkin.Controls.MaterialButton logOutButton;
     }
 }

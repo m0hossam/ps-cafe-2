@@ -49,6 +49,7 @@
             this.passwordTextBox = new MaterialSkin.Controls.MaterialTextBox2();
             this.salaryNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.idLabel = new System.Windows.Forms.Label();
+            this.backButton = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).BeginInit();
@@ -169,7 +170,6 @@
             this.usernameLabel.Size = new System.Drawing.Size(100, 23);
             this.usernameLabel.TabIndex = 3;
             this.usernameLabel.Text = "label1";
-            this.usernameLabel.Visible = false;
             // 
             // addEmployeeButton
             // 
@@ -275,13 +275,33 @@
             this.idLabel.Size = new System.Drawing.Size(100, 23);
             this.idLabel.TabIndex = 44;
             this.idLabel.Text = "label1";
-            this.idLabel.Visible = false;
+            // 
+            // backButton
+            // 
+            this.backButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.backButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.backButton.Depth = 0;
+            this.backButton.HighEmphasis = true;
+            this.backButton.Icon = null;
+            this.backButton.Location = new System.Drawing.Point(6, 592);
+            this.backButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.backButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.backButton.Name = "backButton";
+            this.backButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.backButton.Size = new System.Drawing.Size(64, 36);
+            this.backButton.TabIndex = 45;
+            this.backButton.Text = "back";
+            this.backButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.backButton.UseAccentColor = false;
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 637);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.idLabel);
             this.Controls.Add(this.salaryNumericUpDown);
             this.Controls.Add(this.passwordTextBox);
@@ -325,5 +345,6 @@
         private MaterialSkin.Controls.MaterialTextBox2 passwordTextBox;
         private System.Windows.Forms.NumericUpDown salaryNumericUpDown;
         private System.Windows.Forms.Label idLabel;
+        private MaterialSkin.Controls.MaterialButton backButton;
     }
 }

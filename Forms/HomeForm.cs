@@ -58,7 +58,7 @@ namespace TestDB.Forms
         private void showEmployeeButton_Click(object sender, EventArgs e)
         {
             if (isAdmin == "True")
-                Utilities.ChangeForm(this, new EmployeeForm());
+                Utilities.ChangeForm(this, new EmployeeForm(username));
             else 
                 MessageBox.Show("Error");
         }
@@ -66,9 +66,14 @@ namespace TestDB.Forms
         private void showBillLogButton_Click(object sender, EventArgs e)
         {
             if (isAdmin == "True")
-                Utilities.ChangeForm(this, new EmployeeForm());
+                Utilities.ChangeForm(this, new EmployeeForm(username));
             else
                 MessageBox.Show("Error");
+        }
+
+        private void logOutButton_Click(object sender, EventArgs e)
+        {
+            Utilities.ChangeForm(this, new RegisterForm());
         }
     }
 }

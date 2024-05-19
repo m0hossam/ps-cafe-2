@@ -45,6 +45,7 @@
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeTableAdapter = new TestDB.Database1DataSetTableAdapters.EmployeeTableAdapter();
             this.tableAdapterManager = new TestDB.Database1DataSetTableAdapters.TableAdapterManager();
+            this.backButton = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.salaryNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
@@ -254,11 +255,32 @@
             this.tableAdapterManager.SessionTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = TestDB.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // backButton
+            // 
+            this.backButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.backButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.backButton.Depth = 0;
+            this.backButton.HighEmphasis = true;
+            this.backButton.Icon = null;
+            this.backButton.Location = new System.Drawing.Point(7, 405);
+            this.backButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.backButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.backButton.Name = "backButton";
+            this.backButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.backButton.Size = new System.Drawing.Size(64, 36);
+            this.backButton.TabIndex = 46;
+            this.backButton.Text = "back";
+            this.backButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.backButton.UseAccentColor = false;
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // NewEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(805, 450);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.addEmployeeButton);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.usernameTextBox);
@@ -300,5 +322,6 @@
         private System.Windows.Forms.BindingSource employeeBindingSource;
         private Database1DataSetTableAdapters.EmployeeTableAdapter employeeTableAdapter;
         private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private MaterialSkin.Controls.MaterialButton backButton;
     }
 }
