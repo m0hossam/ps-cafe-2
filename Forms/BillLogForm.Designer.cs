@@ -71,6 +71,8 @@
             // 
             // billDataGridView
             // 
+            this.billDataGridView.AllowUserToAddRows = false;
+            this.billDataGridView.AllowUserToDeleteRows = false;
             this.billDataGridView.AutoGenerateColumns = false;
             this.billDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.billDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -79,9 +81,12 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.billDataGridView.DataSource = this.billBindingSource;
-            this.billDataGridView.Location = new System.Drawing.Point(165, 105);
+            this.billDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.billDataGridView.Location = new System.Drawing.Point(3, 64);
             this.billDataGridView.Name = "billDataGridView";
-            this.billDataGridView.Size = new System.Drawing.Size(442, 142);
+            this.billDataGridView.ReadOnly = true;
+            this.billDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.billDataGridView.Size = new System.Drawing.Size(441, 383);
             this.billDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -96,18 +101,21 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "SessionId";
             this.dataGridViewTextBoxColumn2.HeaderText = "SessionId";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "TotalAmount";
             this.dataGridViewTextBoxColumn3.HeaderText = "TotalAmount";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "EmployeeId";
             this.dataGridViewTextBoxColumn4.HeaderText = "EmployeeId";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // back
             // 
@@ -121,7 +129,7 @@
             this.back.MouseState = MaterialSkin.MouseState.HOVER;
             this.back.Name = "back";
             this.back.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.back.Size = new System.Drawing.Size(158, 36);
+            this.back.Size = new System.Drawing.Size(64, 36);
             this.back.TabIndex = 2;
             this.back.Text = "back";
             this.back.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -133,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(447, 450);
             this.Controls.Add(this.back);
             this.Controls.Add(this.billDataGridView);
             this.Name = "BillLogForm";
