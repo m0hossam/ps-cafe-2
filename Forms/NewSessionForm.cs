@@ -47,7 +47,7 @@ namespace TestDB.Forms
             this.sessionTableAdapter.Update(database1DataSet.Session);
             this.tableAdapterManager.UpdateAll(this.database1DataSet);
 
-            int sessionId = int.Parse(this.sessionTableAdapter.GetSessionByRoomId(roomId).Rows[0]["Id"].ToString());
+            int sessionId = int.Parse(this.sessionTableAdapter.GetMaxId(roomId).ToString());
             int employeeId = int.Parse(this.employeeTableAdapter.GetEmployeeByUsername(username).Rows[0]["Id"].ToString());
             try
             {
