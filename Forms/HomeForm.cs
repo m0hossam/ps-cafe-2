@@ -43,7 +43,7 @@ namespace TestDB.Forms
 
         private void showInformationButton_Click(object sender, EventArgs e)
         {
-            Utilities.ChangeForm(this, new RoomSessionForm(int.Parse(id.Text)));
+            Utilities.ChangeForm(this, new RoomSessionForm(int.Parse(id.Text), username));
         }
 
         private void createNewSessionButton_Click(object sender, EventArgs e)
