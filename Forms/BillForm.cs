@@ -1,4 +1,5 @@
 ﻿using MaterialSkin.Controls;
+using ps_cafe;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,12 +14,43 @@ namespace TestDB.Forms
 {
     public partial class BillForm : MaterialForm
     {
-        int sessionId;
+        int sessionId, billId;
+
+        private void billBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.billBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.database1DataSet);
+
+        }
+
+        private void BillForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'database1DataSet.ItemBill' table. You can move, or remove it, as needed.
+            this.itemBillTableAdapter.Fill(this.database1DataSet.ItemBill);
+            // TODO: This line of code loads data into the 'database1DataSet.Bill' table. You can move, or remove it, as needed.
+            this.billTableAdapter.Fill(this.database1DataSet.Bill);
+
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            Utilities.ChangeForm(this, new HomeForm(Utilities.username));
+        }
+
+        private void checkOutButton_Click(object sender, EventArgs e)
+        {
+            priceLabel.Text = this.billTableAdapter.CalculateBillTotalAmount(billId).ToString();
+        }
+
         public BillForm(int sessionId)
         {
             InitializeComponent( );
             this.sessionId = sessionId;
+            billId = int.Parse(this.billTableAdapter.GetMaxIdBySessionId(sessionId).ToString());
         }
+
+
 
 
 

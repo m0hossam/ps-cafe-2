@@ -29,6 +29,7 @@ namespace TestDB.Forms
                 MessageBox.Show("Error");
                 return;
             }
+            Utilities.username = username;
             Utilities.ChangeForm(this, new HomeForm(username));
 
         }
