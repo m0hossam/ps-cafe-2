@@ -86,7 +86,11 @@ namespace TestDB.Forms
             DateTime start = DateTime.Parse(sessionDataTable.Rows[0]["StartTime"].ToString());
             DateTime end = DateTime.Parse(sessionDataTable.Rows[0]["EndTime"].ToString());
             float sessionPrice = (float)end.Subtract(start).TotalHours * Utilities.ONE_HOUR_PRICE;
-            this.billTableAdapter.CalculateBillTotalAmount(billId, sessionPrice);
+
+            int x = int.Parse(this.billTableAdapter.GetBillById(billId).Rows[0]["TotalAmount"].ToString()) + (int)sessionPrice;
+            
+
+            this.billTableAdapter.UpdateBill(x, billId, billId);
 
             this.tableAdapterManager.UpdateAll(this.database1DataSet);
             Utilities.ChangeForm(this, new BillForm(billId));
