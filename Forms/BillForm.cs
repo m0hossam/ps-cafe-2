@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,16 @@ using System.Windows.Forms;
 
 namespace TestDB.Forms
 {
-    public partial class BillForm : Form
+    public partial class BillForm : MaterialForm
     {
-        public BillForm()
+        int sessionId;
+        public BillForm(int sessionId)
         {
-            InitializeComponent();
+            InitializeComponent( );
+            this.sessionId = sessionId;
         }
+
+
+
     }
 }
