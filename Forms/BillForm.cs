@@ -38,16 +38,12 @@ namespace TestDB.Forms
             Utilities.ChangeForm(this, new HomeForm(Utilities.username));
         }
 
-        private void checkOutButton_Click(object sender, EventArgs e)
-        {
-            priceLabel.Text = this.billTableAdapter.CalculateBillTotalAmount(billId).ToString();
-        }
-
         public BillForm(int sessionId)
         {
             InitializeComponent( );
             this.sessionId = sessionId;
             billId = int.Parse(this.billTableAdapter.GetMaxIdBySessionId(sessionId).ToString());
+            priceLabel.Text =  this.billTableAdapter.GetBillById(billId).Rows[0]["TotalAmount"].ToString();
         }
 
 

@@ -164,7 +164,6 @@
             this.checkOutButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.checkOutButton.UseAccentColor = false;
             this.checkOutButton.UseVisualStyleBackColor = true;
-            this.checkOutButton.Click += new System.EventHandler(this.checkOutButton_Click);
             // 
             // priceLabel
             // 
