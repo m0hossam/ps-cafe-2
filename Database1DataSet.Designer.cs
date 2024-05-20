@@ -5387,7 +5387,7 @@ SELECT Id, GameConsole, Game, StartTime, EndTime, RoomId FROM Session WHERE (Id 
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "SELECT        MAX(Id) AS Expr1\r\nFROM            Session\r\nWHERE        (RoomId = @" +
-                "value); \n";
+                "value); \r\n";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RoomId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();

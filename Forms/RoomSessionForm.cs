@@ -35,7 +35,7 @@ namespace TestDB.Forms
             else
             {
                 roomAvailabilityLabel.Text = "UNAVAILABLE";
-                gameConsoleLabel.Text = this.sessionTableAdapter.GetSessionByRoomId(roomId).Rows[0]["GameConsole"].ToString();
+                gameConsoleLabel.Text = this.sessionTableAdapter.GetMaxId(roomId).ToString();
                 gameLabel.Text = this.sessionTableAdapter.GetSessionByRoomId(roomId).Rows[0]["Game"].ToString();
                 startTimeLabel.Text = this.sessionTableAdapter.GetSessionByRoomId(roomId).Rows[0]["StartTime"].ToString();
                 endTimeLabel.Text = this.sessionTableAdapter.GetSessionByRoomId(roomId).Rows[0]["EndTime"].ToString();
