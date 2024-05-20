@@ -43,6 +43,8 @@ namespace TestDB.Forms
                 startTimeLabel.Text = sessionDataTable.Rows[0]["StartTime"].ToString();
                 endTimeLabel.Text = sessionDataTable.Rows[0]["EndTime"].ToString();
             }
+
+            roomIdLabel.Text = roomId.ToString();
         }
 
         private void roomBindingNavigatorSaveItem_Click(object sender, EventArgs e)

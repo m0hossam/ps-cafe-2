@@ -51,6 +51,7 @@
             this.orderBtn = new MaterialSkin.Controls.MaterialButton();
             this.billBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.billTableAdapter = new TestDB.Database1DataSetTableAdapters.BillTableAdapter();
+            this.roomIdLabel = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource)).BeginInit();
@@ -62,7 +63,8 @@
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(53, 111);
+            this.materialLabel1.Location = new System.Drawing.Point(6, 90);
+            this.materialLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(66, 19);
@@ -74,7 +76,8 @@
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(299, 234);
+            this.materialLabel2.Location = new System.Drawing.Point(218, 196);
+            this.materialLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(83, 19);
@@ -86,7 +89,8 @@
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(310, 275);
+            this.materialLabel3.Location = new System.Drawing.Point(218, 229);
+            this.materialLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(72, 19);
@@ -98,7 +102,8 @@
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(335, 358);
+            this.materialLabel4.Location = new System.Drawing.Point(218, 297);
+            this.materialLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(47, 19);
@@ -110,7 +115,8 @@
             this.materialLabel5.AutoSize = true;
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel5.Location = new System.Drawing.Point(274, 315);
+            this.materialLabel5.Location = new System.Drawing.Point(218, 262);
+            this.materialLabel5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
             this.materialLabel5.Size = new System.Drawing.Size(108, 19);
@@ -122,7 +128,8 @@
             this.currentSessionLabel.AutoSize = true;
             this.currentSessionLabel.Depth = 0;
             this.currentSessionLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.currentSessionLabel.Location = new System.Drawing.Point(333, 184);
+            this.currentSessionLabel.Location = new System.Drawing.Point(287, 90);
+            this.currentSessionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.currentSessionLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.currentSessionLabel.Name = "currentSessionLabel";
             this.currentSessionLabel.Size = new System.Drawing.Size(140, 19);
@@ -135,7 +142,8 @@
             this.roomAvailabilityLabel.BackColor = System.Drawing.SystemColors.Control;
             this.roomAvailabilityLabel.Depth = 0;
             this.roomAvailabilityLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.roomAvailabilityLabel.Location = new System.Drawing.Point(658, 111);
+            this.roomAvailabilityLabel.Location = new System.Drawing.Point(674, 90);
+            this.roomAvailabilityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.roomAvailabilityLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.roomAvailabilityLabel.Name = "roomAvailabilityLabel";
             this.roomAvailabilityLabel.Size = new System.Drawing.Size(103, 19);
@@ -147,7 +155,8 @@
             this.startTimeLabel.AutoSize = true;
             this.startTimeLabel.Depth = 0;
             this.startTimeLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.startTimeLabel.Location = new System.Drawing.Point(411, 234);
+            this.startTimeLabel.Location = new System.Drawing.Point(455, 196);
+            this.startTimeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.startTimeLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.startTimeLabel.Name = "startTimeLabel";
             this.startTimeLabel.Size = new System.Drawing.Size(83, 19);
@@ -159,7 +168,8 @@
             this.endTimeLabel.AutoSize = true;
             this.endTimeLabel.Depth = 0;
             this.endTimeLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.endTimeLabel.Location = new System.Drawing.Point(411, 275);
+            this.endTimeLabel.Location = new System.Drawing.Point(455, 229);
+            this.endTimeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.endTimeLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.endTimeLabel.Name = "endTimeLabel";
             this.endTimeLabel.Size = new System.Drawing.Size(83, 19);
@@ -171,7 +181,8 @@
             this.gameConsoleLabel.AutoSize = true;
             this.gameConsoleLabel.Depth = 0;
             this.gameConsoleLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.gameConsoleLabel.Location = new System.Drawing.Point(411, 315);
+            this.gameConsoleLabel.Location = new System.Drawing.Point(455, 262);
+            this.gameConsoleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gameConsoleLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.gameConsoleLabel.Name = "gameConsoleLabel";
             this.gameConsoleLabel.Size = new System.Drawing.Size(83, 19);
@@ -183,7 +194,8 @@
             this.gameLabel.AutoSize = true;
             this.gameLabel.Depth = 0;
             this.gameLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.gameLabel.Location = new System.Drawing.Point(411, 358);
+            this.gameLabel.Location = new System.Drawing.Point(455, 297);
+            this.gameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gameLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.gameLabel.Name = "gameLabel";
             this.gameLabel.Size = new System.Drawing.Size(83, 19);
@@ -231,8 +243,8 @@
             this.backHomeBtn.Depth = 0;
             this.backHomeBtn.HighEmphasis = true;
             this.backHomeBtn.Icon = null;
-            this.backHomeBtn.Location = new System.Drawing.Point(22, 401);
-            this.backHomeBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.backHomeBtn.Location = new System.Drawing.Point(5, 417);
+            this.backHomeBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.backHomeBtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.backHomeBtn.Name = "backHomeBtn";
             this.backHomeBtn.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -251,8 +263,8 @@
             this.finishSessionBtn.Depth = 0;
             this.finishSessionBtn.HighEmphasis = true;
             this.finishSessionBtn.Icon = null;
-            this.finishSessionBtn.Location = new System.Drawing.Point(636, 401);
-            this.finishSessionBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.finishSessionBtn.Location = new System.Drawing.Point(646, 417);
+            this.finishSessionBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.finishSessionBtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.finishSessionBtn.Name = "finishSessionBtn";
             this.finishSessionBtn.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -271,8 +283,8 @@
             this.orderBtn.Depth = 0;
             this.orderBtn.HighEmphasis = true;
             this.orderBtn.Icon = null;
-            this.orderBtn.Location = new System.Drawing.Point(313, 401);
-            this.orderBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.orderBtn.Location = new System.Drawing.Point(290, 417);
+            this.orderBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.orderBtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.orderBtn.Name = "orderBtn";
             this.orderBtn.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -293,11 +305,24 @@
             // 
             this.billTableAdapter.ClearBeforeFill = true;
             // 
+            // roomIdLabel
+            // 
+            this.roomIdLabel.AutoSize = true;
+            this.roomIdLabel.Depth = 0;
+            this.roomIdLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.roomIdLabel.Location = new System.Drawing.Point(77, 90);
+            this.roomIdLabel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.roomIdLabel.Name = "roomIdLabel";
+            this.roomIdLabel.Size = new System.Drawing.Size(107, 19);
+            this.roomIdLabel.TabIndex = 20;
+            this.roomIdLabel.Text = "materialLabel6";
+            // 
             // RoomSessionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 473);
+            this.ClientSize = new System.Drawing.Size(782, 460);
+            this.Controls.Add(this.roomIdLabel);
             this.Controls.Add(this.orderBtn);
             this.Controls.Add(this.finishSessionBtn);
             this.Controls.Add(this.backHomeBtn);
@@ -312,7 +337,9 @@
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "RoomSessionForm";
+            this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
             this.Text = "RoomSessionForm";
             this.Load += new System.EventHandler(this.RoomSessionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
@@ -347,5 +374,6 @@
         private MaterialSkin.Controls.MaterialButton orderBtn;
         private System.Windows.Forms.BindingSource billBindingSource;
         private Database1DataSetTableAdapters.BillTableAdapter billTableAdapter;
+        private MaterialSkin.Controls.MaterialLabel roomIdLabel;
     }
 }
