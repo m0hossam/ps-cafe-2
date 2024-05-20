@@ -3262,7 +3262,7 @@ SELECT Id, SessionId, TotalAmount, EmployeeId FROM Bill WHERE (Id = @Id)";
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = "SELECT        MAX(Id) AS Expr1\r\nFROM            Bill\r\nWHERE        (SessionId = @" +
-                "value);  \n";
+                "value);  \r\n";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "SessionId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();

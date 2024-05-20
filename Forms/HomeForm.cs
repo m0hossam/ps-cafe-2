@@ -76,7 +76,7 @@ namespace TestDB.Forms
             Utilities.ChangeForm(this, new RegisterForm());
         }
 
-        private void newRoomBtn_Click(object sender, EventArgs e)
+        private void newRoomBtn_Click_1(object sender, EventArgs e)
         {
             if (isAdmin == "False")
             {

@@ -34,11 +34,13 @@ namespace TestDB.Forms
             }
             else
             {
+                int sessionId = int.Parse(this.sessionTableAdapter.GetMaxId(roomId).ToString());
+                Database1DataSet.SessionDataTable sessionDataTable = this.sessionTableAdapter.GetSessionById(sessionId);
                 roomAvailabilityLabel.Text = "UNAVAILABLE";
-                gameConsoleLabel.Text = this.sessionTableAdapter.GetMaxId(roomId).ToString();
-                gameLabel.Text = this.sessionTableAdapter.GetSessionByRoomId(roomId).Rows[0]["Game"].ToString();
-                startTimeLabel.Text = this.sessionTableAdapter.GetSessionByRoomId(roomId).Rows[0]["StartTime"].ToString();
-                endTimeLabel.Text = this.sessionTableAdapter.GetSessionByRoomId(roomId).Rows[0]["EndTime"].ToString();
+                gameConsoleLabel.Text = sessionDataTable.Rows[0]["GameConsole"].ToString();
+                gameLabel.Text = sessionDataTable.Rows[0]["Game"].ToString();
+                startTimeLabel.Text = sessionDataTable.Rows[0]["StartTime"].ToString();
+                endTimeLabel.Text = sessionDataTable.Rows[0]["EndTime"].ToString();
             }
         }
 
