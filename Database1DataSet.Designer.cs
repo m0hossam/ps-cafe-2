@@ -3254,6 +3254,7 @@ SELECT Id, SessionId, TotalAmount, EmployeeId FROM Bill WHERE (Id = @Id)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@billId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sessionPrice", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 53, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "SELECT Id, SessionId, TotalAmount, EmployeeId\r\nFROM     Bill\r\nWHERE  (Id = @id)";
@@ -3429,13 +3430,19 @@ SELECT Id, SessionId, TotalAmount, EmployeeId FROM Bill WHERE (Id = @Id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int CalculateBillTotalAmount(global::System.Nullable<int> billId) {
+        public virtual int CalculateBillTotalAmount(global::System.Nullable<int> billId, global::System.Nullable<double> sessionPrice) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             if ((billId.HasValue == true)) {
                 command.Parameters[1].Value = ((int)(billId.Value));
             }
             else {
                 command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((sessionPrice.HasValue == true)) {
+                command.Parameters[2].Value = ((double)(sessionPrice.Value));
+            }
+            else {
+                command.Parameters[2].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
