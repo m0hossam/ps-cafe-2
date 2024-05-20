@@ -14,7 +14,6 @@ namespace TestDB.Forms
 {
     public partial class RoomSessionForm : MaterialForm
     {
-
         private int roomId;
         private string shiftEmployeeUsername;
 
@@ -78,9 +77,17 @@ namespace TestDB.Forms
 
         private void finishSessionBtn_Click(object sender, EventArgs e)
         {
+            this.roomTableAdapter.UpdateRoom(true, roomId, roomId);
             int sessionId = int.Parse(this.sessionTableAdapter.GetMaxId(roomId).ToString());
             int billId = int.Parse(this.billTableAdapter.GetMaxIdBySessionId(sessionId).ToString());
-            this.billTableAdapter.CalculateBillTotalAmount(billId);
+            Database1DataSet.SessionDataTable sessionDataTable = this.sessionTableAdapter.GetSessionById(sessionId);
+            DateTime start = DateTime.Parse(sessionDataTable.Rows[0]["StartTime"].ToString());
+            DateTime end = DateTime.Parse(sessionDataTable.Rows[0]["EndTime"].ToString());
+            float sessionPrice = (float)end.Subtract(start).TotalHours * Utilities.ONE_HOUR_PRICE;
+            this.billTableAdapter.CalculateBillTotalAmount(billId, sessionPrice);
+
+            this.tableAdapterManager.UpdateAll(this.database1DataSet);
+            Utilities.ChangeForm(this, new BillForm(billId));
         }
     }
 }
