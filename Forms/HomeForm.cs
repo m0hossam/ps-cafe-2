@@ -89,5 +89,13 @@ namespace TestDB.Forms
             this.roomTableAdapter.Fill(this.database1DataSet.Room);
             this.tableAdapterManager.UpdateAll(this.database1DataSet);
         }
+
+        private void addItemButton_Click(object sender, EventArgs e)
+        {
+            if (isAdmin == "True")
+                Utilities.ChangeForm(this, new NewItemForm());
+            else
+                MessageBox.Show("Error");
+        }
     }
 }
