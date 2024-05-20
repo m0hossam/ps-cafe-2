@@ -4,6 +4,7 @@ namespace ps_cafe
 {
     internal static class Utilities
     {
+        public static string username;
         public static void ChangeForm(Form currentForm, Form newForm)
         {
             currentForm.Hide();
