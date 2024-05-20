@@ -1,4 +1,5 @@
 ﻿using MaterialSkin.Controls;
+using ps_cafe;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,11 +55,32 @@ namespace TestDB.Forms
 
         private void RoomSessionForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'database1DataSet.Bill' table. You can move, or remove it, as needed.
+            this.billTableAdapter.Fill(this.database1DataSet.Bill);
             // TODO: This line of code loads data into the 'database1DataSet.Session' table. You can move, or remove it, as needed.
             this.sessionTableAdapter.Fill(this.database1DataSet.Session);
             // TODO: This line of code loads data into the 'database1DataSet.Room' table. You can move, or remove it, as needed.
             this.roomTableAdapter.Fill(this.database1DataSet.Room);
 
+        }
+
+        private void backHomeBtn_Click(object sender, EventArgs e)
+        {
+            Utilities.ChangeForm(this, new HomeForm(shiftEmployeeUsername));
+        }
+
+        private void orderBtn_Click(object sender, EventArgs e)
+        {
+            int sessionId = int.Parse(this.sessionTableAdapter.GetMaxId(roomId).ToString());
+            int billId = int.Parse(this.billTableAdapter.GetMaxIdBySessionId(sessionId).ToString());
+            Utilities.ChangeForm(this, new OrderForm(billId));
+        }
+
+        private void finishSessionBtn_Click(object sender, EventArgs e)
+        {
+            int sessionId = int.Parse(this.sessionTableAdapter.GetMaxId(roomId).ToString());
+            int billId = int.Parse(this.billTableAdapter.GetMaxIdBySessionId(sessionId).ToString());
+            this.billTableAdapter.CalculateBillTotalAmount(billId);
         }
     }
 }

@@ -46,9 +46,15 @@
             this.tableAdapterManager = new TestDB.Database1DataSetTableAdapters.TableAdapterManager();
             this.sessionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sessionTableAdapter = new TestDB.Database1DataSetTableAdapters.SessionTableAdapter();
+            this.backHomeBtn = new MaterialSkin.Controls.MaterialButton();
+            this.finishSessionBtn = new MaterialSkin.Controls.MaterialButton();
+            this.orderBtn = new MaterialSkin.Controls.MaterialButton();
+            this.billBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.billTableAdapter = new TestDB.Database1DataSetTableAdapters.BillTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.billBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -218,11 +224,83 @@
             // 
             this.sessionTableAdapter.ClearBeforeFill = true;
             // 
+            // backHomeBtn
+            // 
+            this.backHomeBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.backHomeBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.backHomeBtn.Depth = 0;
+            this.backHomeBtn.HighEmphasis = true;
+            this.backHomeBtn.Icon = null;
+            this.backHomeBtn.Location = new System.Drawing.Point(22, 401);
+            this.backHomeBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.backHomeBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.backHomeBtn.Name = "backHomeBtn";
+            this.backHomeBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.backHomeBtn.Size = new System.Drawing.Size(127, 36);
+            this.backHomeBtn.TabIndex = 17;
+            this.backHomeBtn.Text = "Back To Home";
+            this.backHomeBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.backHomeBtn.UseAccentColor = false;
+            this.backHomeBtn.UseVisualStyleBackColor = true;
+            this.backHomeBtn.Click += new System.EventHandler(this.backHomeBtn_Click);
+            // 
+            // finishSessionBtn
+            // 
+            this.finishSessionBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.finishSessionBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.finishSessionBtn.Depth = 0;
+            this.finishSessionBtn.HighEmphasis = true;
+            this.finishSessionBtn.Icon = null;
+            this.finishSessionBtn.Location = new System.Drawing.Point(636, 401);
+            this.finishSessionBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.finishSessionBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.finishSessionBtn.Name = "finishSessionBtn";
+            this.finishSessionBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.finishSessionBtn.Size = new System.Drawing.Size(131, 36);
+            this.finishSessionBtn.TabIndex = 18;
+            this.finishSessionBtn.Text = "Finish Session";
+            this.finishSessionBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.finishSessionBtn.UseAccentColor = false;
+            this.finishSessionBtn.UseVisualStyleBackColor = true;
+            this.finishSessionBtn.Click += new System.EventHandler(this.finishSessionBtn_Click);
+            // 
+            // orderBtn
+            // 
+            this.orderBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.orderBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.orderBtn.Depth = 0;
+            this.orderBtn.HighEmphasis = true;
+            this.orderBtn.Icon = null;
+            this.orderBtn.Location = new System.Drawing.Point(313, 401);
+            this.orderBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.orderBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.orderBtn.Name = "orderBtn";
+            this.orderBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.orderBtn.Size = new System.Drawing.Size(188, 36);
+            this.orderBtn.TabIndex = 19;
+            this.orderBtn.Text = "Order Food or Drinks";
+            this.orderBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.orderBtn.UseAccentColor = false;
+            this.orderBtn.UseVisualStyleBackColor = true;
+            this.orderBtn.Click += new System.EventHandler(this.orderBtn_Click);
+            // 
+            // billBindingSource
+            // 
+            this.billBindingSource.DataMember = "Bill";
+            this.billBindingSource.DataSource = this.database1DataSet;
+            // 
+            // billTableAdapter
+            // 
+            this.billTableAdapter.ClearBeforeFill = true;
+            // 
             // RoomSessionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 473);
+            this.Controls.Add(this.orderBtn);
+            this.Controls.Add(this.finishSessionBtn);
+            this.Controls.Add(this.backHomeBtn);
             this.Controls.Add(this.gameLabel);
             this.Controls.Add(this.gameConsoleLabel);
             this.Controls.Add(this.endTimeLabel);
@@ -240,6 +318,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.billBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,5 +342,10 @@
         private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingSource sessionBindingSource;
         private Database1DataSetTableAdapters.SessionTableAdapter sessionTableAdapter;
+        private MaterialSkin.Controls.MaterialButton backHomeBtn;
+        private MaterialSkin.Controls.MaterialButton finishSessionBtn;
+        private MaterialSkin.Controls.MaterialButton orderBtn;
+        private System.Windows.Forms.BindingSource billBindingSource;
+        private Database1DataSetTableAdapters.BillTableAdapter billTableAdapter;
     }
 }

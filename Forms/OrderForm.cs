@@ -13,7 +13,7 @@ namespace TestDB.Forms
 {
     public partial class OrderForm : MaterialForm
     {
-        public OrderForm()
+        public OrderForm(int billId)
         {
             InitializeComponent();
         }
